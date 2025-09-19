@@ -1,6 +1,9 @@
-[build]
-  command = "flutter build web"
-  publish = "build/web"
+[[plugins]]
+  package = "netlify-plugin-flutter"
 
-[build.environment]
-  FLUTTER_VERSION = "3.29.2"
+[plugins.inputs]
+  channel = "stable"
+
+[build]
+  command = "flutter build web --release"
+  publish = "build/web"
