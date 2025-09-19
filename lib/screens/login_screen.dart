@@ -6,6 +6,7 @@ import '../widgets/app_scaffold.dart';
 import '../config.dart';
 import 'home_screen.dart';
 import 'employee_dashboard_screen.dart';
+import 'register_screen.dart';
 
 enum LoginType { admin, employee }
 
@@ -138,6 +139,16 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: Text(message!, style: TextStyle(color: Colors.red, fontSize: 14)),
                   ),
                 _buildSubmitButton(),
+                SizedBox(height: 20),
+                TextButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => RegisterScreen()),
+                    );
+                  },
+                  child: Text("Vous n'avez pas de compte ? S'inscrire"),
+                )
               ],
             ),
           ),
